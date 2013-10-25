@@ -89,3 +89,11 @@ node default {
     target => $boxen::config::repodir
   }
 }
+
+include java
+include adium
+include chrome
+include phpstorm
+include netbeans
+include vagrant
+include virtualbox
