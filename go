@@ -12,7 +12,7 @@ echo " "
 echo " "
 rm -Rf ~/boxen
 mkdir ~/boxen
-git clone -b 2.0 https://github.com/healeyious/boxen-portal ~/boxen/repo
+git clone -b 2.0 https://github.com/BrightTALK/boxen-portal ~/boxen/repo
 cd ~/boxen/repo
 script/boxen --no-fde
 touch ~/.bashrc
