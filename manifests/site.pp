@@ -53,27 +53,18 @@ Homebrew::Formula <| |> -> Package <| |>
 
 node default {
   # core modules, needed for most things
-  include dnsmasq
+  #include dnsmasq
   include git
   include hub
-  include nginx
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
     fail('Please enable full disk encryption and try again')
   }
 
-  # node versions
-#  include nodejs::v0_4
-#  include nodejs::v0_6
-#  include nodejs::v0_8
-#  include nodejs::v0_10
 
   # default ruby versions
-#  include ruby::1_8_7
-#  include ruby::1_9_2
-#  include ruby::1_9_3
-#  include ruby::2_0_0
+  include ruby::1_9_3
 
   # common, useful packages
   package {
@@ -95,7 +86,9 @@ include adium
 include chrome
 include phpstorm
 include netbeans
-include vagrant
-include virtualbox
-include caffeine
-
+include mysql
+include php::5_3_27
+include phantomjs
+phantomjs::version { '1.9.2': }
+phantomjs::global { '1.9.2': }
+include redis
