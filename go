@@ -20,3 +20,10 @@ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 echo "Installling rbenv and ruby (requires homebrew)..."
 brew install rbenv
 brew install ruby
+export JAVA_HOME=/usr/libexec/java_home
+curl -o apache-ant-1.8.2-bin.tar.gz http://archive.apache.org/dist/ant/binaries/apache-ant-1.8.2-bin.tar.gz
+tar -xzf apache-ant-1.8.2-bin.tar.gz
+mv apache-ant-1.8.2 /usr/local/
+ln -s /usr/local/apache-ant-1.8.2/bin/ant /usr/local/bin/ant
+rm -Rf apache-ant*
+
