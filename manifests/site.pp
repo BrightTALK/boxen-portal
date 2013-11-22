@@ -87,7 +87,7 @@ include chrome
 include phpstorm
 include netbeans
 include mysql
-inlude php::5_3_27
+include php::5_3_27
 include phantomjs
 phantomjs::version { '1.9.2': }
 phantomjs::global { '1.9.2': }
